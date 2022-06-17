@@ -64,7 +64,7 @@ Resources:
         - DeviceName: "/dev/sdk"
           Ebs:
             VolumeSize: '10'
-    WebAppGroup:
+  WebAppGroup:
     Type: AWS::AutoScaling::AutoScalingGroup
     Properties:
       VPCZoneIdentifier:
@@ -129,22 +129,13 @@ Resources:
       Roles:
         - UdacityS3ReadOnlyEC2
 Outputs: 
-    LoadBalancer:
-      Description: The URL of the Load Balancer
-      Value:
-        Fn::Join:
-          - ""
-          - "-"
-          - !Ref WebAppLB
 
     LoadBalancerDNS:
       Description: The DNS name of the Load Balancer
       Value:
       #Join http:// to dns name of the load balancer
-        Fn::Join:
-          - ""
-          - "http://"
-          - !GetAtt WebAppLB.DNSName
+        Fn::Join: [ "", ["http://", Fn::GetAtt: [WebAppLB, DNSName ]] ]
+         
   # This is also optional.
   # Bonus points for useful outputs!
   # for example, if you create a Load Balancer
