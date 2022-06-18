@@ -28,3 +28,6 @@ You can run the supporting material in two easy steps:
 # Check the region in the update.sh file
 ./update.sh mySecStack servers.yml server-parameters.json
 ```
+
+
+URL for Load balancer Dns name: http://udagr-WebAp-15FO0J5RD0E42-766908387.us-east-1.elb.amazonaws.com
