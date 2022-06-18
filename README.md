@@ -30,4 +30,4 @@ You can run the supporting material in two easy steps:
 ```
 
 
-URL for Load balancer Dns name: http://udagr-WebAp-15FO0J5RD0E42-766908387.us-east-1.elb.amazonaws.com
+URL for Load balancer Dns name: http://udagr-webap-wz4e0sji6v2a-63565813.us-east-1.elb.amazonaws.com/
